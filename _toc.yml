@@ -1,0 +1,19 @@
+
+# _toc.yml
+format: jb-book
+root: intro
+parts:
+  - caption: Getting Started
+    chapters:
+    - file: Interacting With Jupyter Books
+
+  - caption: "Basic Concepts of Fixed Income: Chapter Seven"
+    chapters:
+    - file: Chapter_Seven_Highlights
+      sections:
+      - file: Define_Duratiion
+      - file: FRED_Example
+      - file: Measuring_Interest_Rate_Risk_With_Duration
+      - file: Chapter_Seven_Summary
+      - file: imported_functions_Seven
+

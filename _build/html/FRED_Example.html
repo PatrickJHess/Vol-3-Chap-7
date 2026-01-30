@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Acessing Data From The FRED Database &#8212; Basic Concepts of Fixed Income:Par Yields</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FRED_Example';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Measuring Interest Rate Risk With Duration" href="Measuring_Interest_Rate_Risk_With_Duration.html" />
+    <link rel="prev" title="What is duration and why does it matter" href="Define_Duratiion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Basic Concepts of Fixed Income:Par Yields</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Financial Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Seven</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Define_Duratiion.html">What is duration and why does it matter</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Acessing Data From The FRED Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Seven_Summary.html">Summarizing Measuring Interest Risk With Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imported_functions_Seven.html">Functions Imported by Chapter Six.</a></li>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Vol-3-Chap-6/master?urlpath=tree/FRED_Example.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Vol-3-Chap-6/blob/master/FRED_Example.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-6/issues/new?title=Issue%20on%20page%20%2FFRED_Example.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/FRED_Example.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Acessing Data From The FRED Database</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">Demonstrating FRED with the FED’s Ownership of Financial Securities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-increase-in-the-fed-s-financial-market-intervention">Large Increase in the FED’s Financial Market Intervention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019"><font color="green">Application: Get the secured overnight financing rates for the fourth quarter of 2019.</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started-with-gemini">Some suggestions to get you started with Gemini.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-paste-the-questions-here">Copy and paste the questions here</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="acessing-data-from-the-fred-database">
+<h1>Acessing Data From The FRED Database<a class="headerlink" href="#acessing-data-from-the-fred-database" title="Link to this heading">#</a></h1>
+<p>This and other chapters will utilize data from the FRED database, maintained by the Federal Reserve Bank of St. Louis. This resource provides valuable data for analyzing a wide range of financial topics, such as bonds, stocks, foreign exchange, and derivatives—information that will be beneficial for this and subsequent volumes, as well as throughout your professional career.</p>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=WCMvPDsH-Pw" target="_blank">
+    <img src="https://img.youtube.com/vi/WCMvPDsH-Pw/maxresdefault.jpg" 
+    alt="Watch Video" style="width:560px; border:2px solid #ccc;" />
+  </a>
+  <br>
+  <em>(Click image to watch on YouTube)</em>
+</div><section id="importing-libraries-modules-and-functions">
+<h2>Importing libraries, modules, and functions<a class="headerlink" href="#importing-libraries-modules-and-functions" title="Link to this heading">#</a></h2>
+<p>As in earlier chapters of the volume, modules that are included in the standard Python library are imported. A new module, <strong>pandas_datarader</strong>, is imported. Because it is not part of the Pandas library, it has to be imported and when necessary installed.  The module is convenient because it:</p>
+<ul class="simple">
+<li><p><strong>Does not</strong> require an API key to access FRED data.</p></li>
+<li><p>Returns results as <strong>Pandas DataFrames</strong></p></li>
+</ul>
+<p>If necessary, modules or libraries are installed before they are imported.<span class="math notranslate nohighlight">\(^{1}\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from datetime import date
+
+try:
+    import pandas_datareader as pdr
+except:
+    !pip install pandas-datareader
+    import pandas_datareader as pdr`
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(^{1}\)</span>For more information on <font color='green'>try</font> and <font color='green'>except</font> statements, see “<a href='https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Control_Statements.html#the-try-and-except'>Control Statements</a>.”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the datetime and date classes from the datetime module for working with dates.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span>  <span class="n">date</span>
+
+<span class="c1"># Import the pandas library for data manipulation and analysis, aliased as pd.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas_datareader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdr</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas-datareader
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas_datareader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">
+<h2>Demonstrating FRED with the FED’s Ownership of Financial Securities<a class="headerlink" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities" title="Link to this heading">#</a></h2>
+<p>The expansion of the FED’s balance sheet douments the unprecedent intervention beginning with the collapse of Bear Streans in 2007.  In order to demonstrate the scope of this so-called ‘Quantative Easing’, we need to identify a data series and its unque id. Here ‘total assets federal reserves’ is typed into the search and several options are returned.</p>
+<p><img alt="Fred Search Field" src="https://drive.google.com/uc?export=view&amp;id=1rpAN3jkOAKEaH-OtWDZJSayb4rNYT4Ru" /></p>
+<p>Clicking on the desired data series returns a graph of that data and the unique series id <strong>WALC</strong>.</p>
+<p><img alt="Weekly Asset Totals" src="https://drive.google.com/uc?export=view&amp;id=1Hln2mQs2Dxx8gsJGmi7gb0DhQkoS--6q" /></p>
+<p>The arguments of the get_data_fred of the Pandas datareader are</p>
+<p>the list series_id, start_date, and end_date.  A DataFrame of results is</p>
+<ul class="simple">
+<li><p><strong>series identifier</strong>: may be an iterable or a single string. Here ist is assigned to the list <pandas color='green'>series_key</font>.</p></li>
+<li><p><strong>starting date</strong> may be a date, datetime, or a string like ‘2020-01=01’. Here it is assigned to <pandas color='green'>start_date</font> as a date.</p></li>
+<li><p><strong>ending date</strong> may be a date, datetime, or a string like ‘2020-01=01’. Here it is assigned to <pandas color='green'>end_date</font> as a string.</p></li>
+</ul>
+<p>assigned to fed_assets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># unique series id assigned to list</span>
+<span class="n">series_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;WALCL&#39;</span><span class="p">]</span>
+
+<span class="c1"># set start and end dates as date objects</span>
+<span class="n">start_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;2025-12-31&#39;</span>
+
+<span class="c1"># Pandas datareader returns a DataFrame</span>
+<span class="n">fed_assets</span><span class="o">=</span><span class="n">pdr</span><span class="o">.</span><span class="n">get_data_fred</span><span class="p">(</span><span class="n">series_id</span><span class="p">,</span><span class="n">start_date</span><span class="p">,</span><span class="n">end_date</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fed_assets</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>WALCL</th>
+    </tr>
+    <tr>
+      <th>DATE</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2007-06-06</th>
+      <td>872706</td>
+    </tr>
+    <tr>
+      <th>2007-06-13</th>
+      <td>864989</td>
+    </tr>
+    <tr>
+      <th>2007-06-20</th>
+      <td>866089</td>
+    </tr>
+    <tr>
+      <th>2007-06-27</th>
+      <td>865105</td>
+    </tr>
+    <tr>
+      <th>2007-07-04</th>
+      <td>876611</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-12-03</th>
+      <td>6535781</td>
+    </tr>
+    <tr>
+      <th>2025-12-10</th>
+      <td>6539303</td>
+    </tr>
+    <tr>
+      <th>2025-12-17</th>
+      <td>6556861</td>
+    </tr>
+    <tr>
+      <th>2025-12-24</th>
+      <td>6581231</td>
+    </tr>
+    <tr>
+      <th>2025-12-31</th>
+      <td>6640618</td>
+    </tr>
+  </tbody>
+</table>
+<p>970 rows × 1 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="large-increase-in-the-fed-s-financial-market-intervention">
+<h2>Large Increase in the FED’s Financial Market Intervention<a class="headerlink" href="#large-increase-in-the-fed-s-financial-market-intervention" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Prior to the financial crisis of 2008, the Federal Reserve Balance Sheet was a between 200 and 800 billion.</p></li>
+<li><p>By 2022, it had increased by ten times.</p></li>
+</ul>
+</section>
+<section id="application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019">
+<h2><font color='green'>Application: Get the secured overnight financing rates for the fourth quarter of 2019.<a class="headerlink" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019" title="Link to this heading">#</a></h2>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/1ZMO2gJ56kCFUXS4zUhljrW5Cj6GESuKp">Chapter Seven Hints: Get secured overnight financing rates</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1VJzd020F3lfs-1cP2EAS2fBSKazIPYOC#scrollTo=vnPEV819ilWL">expected results here</a>.</p>
+</section>
+<section id="take-a-deeper-dive-with-ai">
+<h2><font color='green'>Take a deeper dive with AI</font><a class="headerlink" href="#take-a-deeper-dive-with-ai" title="Link to this heading">#</a></h2>
+<section id="some-suggestions-to-get-you-started-with-gemini">
+<h3>Some suggestions to get you started with Gemini.<a class="headerlink" href="#some-suggestions-to-get-you-started-with-gemini" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Describe ways to access FRED</p></li>
+<li><p>How do I get an API key for FRED?</p></li>
+<li><p>Does pandas_datareader require an API key for FRED?</p></li>
+</ul>
+</section>
+<section id="copy-and-paste-the-questions-here">
+<h3><a class="reference external" href="https://gemini.google.com">Copy and paste the questions here</a><a class="headerlink" href="#copy-and-paste-the-questions-here" title="Link to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PatrickJHess/Vol-3-Chap-6",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Define_Duratiion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What is duration and why does it matter</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Measuring_Interest_Rate_Risk_With_Duration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measuring Interest Rate Risk With Duration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">Demonstrating FRED with the FED’s Ownership of Financial Securities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-increase-in-the-fed-s-financial-market-intervention">Large Increase in the FED’s Financial Market Intervention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019"><font color="green">Application: Get the secured overnight financing rates for the fourth quarter of 2019.</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started-with-gemini">Some suggestions to get you started with Gemini.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-paste-the-questions-here">Copy and paste the questions here</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 by Arbitrage Partners..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
