@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -444,7 +444,7 @@ document.write(`
 <p>This and other chapters will utilize data from the FRED database, maintained by the Federal Reserve Bank of St. Louis. This resource provides valuable data for analyzing a wide range of financial topics, such as bonds, stocks, foreign exchange, and derivatives—information that will be beneficial for this and subsequent volumes, as well as throughout your professional career.</p>
 <div align="center">
   <a href="https://www.youtube.com/watch?v=WCMvPDsH-Pw" target="_blank">
-    <img src="https://img.youtube.com/vi/WCMvPDsH-Pw/maxresdefault.jpg" 
+    <img src="https://img.youtube.com/vi/WCMvPDsH-Pw/maxresdefault.jpg"
     alt="Watch Video" style="width:560px; border:2px solid #ccc;" />
   </a>
   <br>
@@ -487,9 +487,9 @@ except:
 <section id="demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">
 <h2>Demonstrating FRED with the FED’s Ownership of Financial Securities<a class="headerlink" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities" title="Link to this heading">#</a></h2>
 <p>The expansion of the FED’s balance sheet douments the unprecedent intervention beginning with the collapse of Bear Streans in 2007.  In order to demonstrate the scope of this so-called ‘Quantative Easing’, we need to identify a data series and its unque id. Here ‘total assets federal reserves’ is typed into the search and several options are returned.</p>
-<p><img alt="Fred Search Field" src="https://drive.google.com/uc?export=view&amp;id=1rpAN3jkOAKEaH-OtWDZJSayb4rNYT4Ru" /></p>
+<p><img alt="Fred Search Field" src="https://drive.google.com/thumbnail?id=1rpAN3jkOAKEaH-OtWDZJSayb4rNYT4Ru&amp;sz=w1000" /></p>
 <p>Clicking on the desired data series returns a graph of that data and the unique series id <strong>WALC</strong>.</p>
-<p><img alt="Weekly Asset Totals" src="https://drive.google.com/uc?export=view&amp;id=1Hln2mQs2Dxx8gsJGmi7gb0DhQkoS--6q" /></p>
+<p><img alt="Weekly Asset Totals" src="https://drive.google.com/thumbnail?id=1Hln2mQs2Dxx8gsJGmi7gb0DhQkoS--6q&amp;sz=w1000" /></p>
 <p>The arguments of the get_data_fred of the Pandas datareader are</p>
 <p>the list series_id, start_date, and end_date.  A DataFrame of results is</p>
 <ul class="simple">
