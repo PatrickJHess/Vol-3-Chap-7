@@ -593,7 +593,7 @@ except:
 <span class="c1"># Open the local file in &quot;write binary&quot; (&#39;wb&#39;) mode and save the downloaded content.</span>
 <span class="c1"># Using a &#39;with&#39; statement ensures the file is properly closed after writing.</span>
 
-<span class="c1"># Now that &#39;basic_concepts_ficed_income&#39; exists in the notebook, import the specific functions</span>
+<span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">bond_pay_data</span><span class="p">,</span>
                                         <span class="n">calc_ytm</span><span class="p">,</span>
                                          <span class="n">bond_pv</span><span class="p">,</span>
@@ -768,7 +768,7 @@ except:
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/1ZMO2gJ56kCFUXS4zUhljrW5Cj6GESuKp">Chapter Six Hints: Make the initial quess 7%</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1VJzd020F3lfs-1cP2EAS2fBSKazIPYOC#scrollTo=vnPEV819ilWL">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=18JPuNdiU19-">Chapter Seven Hints: Calculate duration with different maturities, coupons, and rates.</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=18JPuNdiU19-">expected results here</a>.</p>
 </div></section>
 <section id="demonstrating-the-calc-duration-with-304-fidelity-bonds">
 <h2>Demonstrating the <font color='green'>calc_duration</font> with 304 Fidelity Bonds<a class="headerlink" href="#demonstrating-the-calc-duration-with-304-fidelity-bonds" title="Link to this heading">#</a></h2>
@@ -1281,101 +1281,6 @@ except:
 <p>9005 rows × 3 columns</p>
 </div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">par_yields_daily</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>dgs6mo</th>
-      <th>dgs10</th>
-      <th>dgs30</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>9005.000000</td>
-      <td>9005.000000</td>
-      <td>9005.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>2.906890</td>
-      <td>4.251174</td>
-      <td>4.768421</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>2.298334</td>
-      <td>1.939764</td>
-      <td>1.781777</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.020000</td>
-      <td>0.520000</td>
-      <td>0.990000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.410000</td>
-      <td>2.610000</td>
-      <td>3.160000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>2.980000</td>
-      <td>4.170000</td>
-      <td>4.680000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>5.100000</td>
-      <td>5.710000</td>
-      <td>5.940000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>8.490000</td>
-      <td>9.090000</td>
-      <td>9.180000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.0459</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.089755517556171
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="demonstrate-the-relation-between-coupon-rate-and-duration">
 <h2>Demonstrate the Relation between Coupon Rate and Duration<a class="headerlink" href="#demonstrate-the-relation-between-coupon-rate-and-duration" title="Link to this heading">#</a></h2>
@@ -1485,7 +1390,7 @@ except:
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/1ZMO2gJ56kCFUXS4zUhljrW5Cj6GESuKp">Chapter Six Hints: Make the initial quess 7%</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1VJzd020F3lfs-1cP2EAS2fBSKazIPYOC#scrollTo=vnPEV819ilWL">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=m-SmcqAcL1FZ">Chapter Seven Hints: Calculate Duration with Minimum and Maximum Par Yields</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=m-SmcqAcL1FZ">expected results here</a>.</p>
 </div></section>
 <section id="relation-between-par-yields-and-duration-of-bonds-issued-at-par">
 <h2>Relation between Par Yields and Duration of Bonds Issued at Par.<a class="headerlink" href="#relation-between-par-yields-and-duration-of-bonds-issued-at-par" title="Link to this heading">#</a></h2>
@@ -2448,7 +2353,7 @@ except:
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/1ZMO2gJ56kCFUXS4zUhljrW5Cj6GESuKp">Chapter Six Hints: Make the initial quess 7%</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1VJzd020F3lfs-1cP2EAS2fBSKazIPYOC#scrollTo=vnPEV819ilWL">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=OSNW4BGt398p">Chapter Seven Hints: Calculate Duration At Different Yields To Maturity</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=OSNW4BGt398p">expected results here</a>.</p>
 </div></section>
 <section id="chapter-exercise">
 <h2><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h2>
@@ -2501,13 +2406,14 @@ Assume that the settlement date is January 31$^{st}$ 2026
 </tbody>
 </table>
 </div>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=f9PjphbSk8Ds">Chapter Seven Hints: Compare the Actual and Duration Forecasted Rates of Change in Bond Prices</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=C4BS9et_mhev">expected results here</a>.</p>
 </div></section>
 <section id="take-a-deeper-dive-with-gemini">
 <h2><font color='green'>Take a deeper dive with Gemini</font><a class="headerlink" href="#take-a-deeper-dive-with-gemini" title="Link to this heading">#</a></h2>
 <section id="some-suggestions-to-get-you-started">
 <h3>Some suggestions to get you started.<a class="headerlink" href="#some-suggestions-to-get-you-started" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Should Property &amp; Cacuality and Life Insurance companies own bonds with different or similar durations?</strong></p></li>
+<li><p><strong>Should Property &amp; Casuality and Life Insurance companies own bonds with different or similar durations?</strong></p></li>
 <li><p><strong>How does duration interact with reinvestment rate risk?</strong></p></li>
 <li><p><strong>Do companies use duration to hedge?</strong></p></li>
 <li><p><strong>What term structure risk does duration measure?</strong></p></li>
