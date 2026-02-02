@@ -31,7 +31,7 @@ $$\text{Duration} = \frac{\sum_{i=1}^{N}t_i\times \text{Cash Flow}_{t_i} \times 
 
 <br>
 
-Duration scales the effect of changes in yield to maturity on bond values and is used to measure the interest rate risk of bonds.
+Duration scales the effect of changes in yield to maturity on bond values Duration measures a bond's interest rate risk by showing how sensitive its price is to changes in the yield to maturity. Specifically, a duration of one forecast a percentage price change equal to the change in the yield to maturity. A qualification, however, is needed. Because duration is negatively related to the yield to maturity, forecasts of price changes will contain errors that are also negatively related to changes in yields to maturity-forecasts will be positive for decreases and negative for increases in yields to maturity.
 
 
 
