@@ -34,6 +34,6 @@ Here is a preview of the cell contents:
 -------------------
 ['# settlement date is arbitrarily set for December 31, 2025', 'settlement=date(2025,12,31)', '', '# maturity dates are fixed relative to fixed settlement date', 'maturity_10=settlement+relativedelta(years=10)']
 ...
-['        settlement=settlement,', "        rates=2*np.log(1+x['dgs30']/200)", '    ), axis=1', ')', 'display(par_yields_monthly)']
+['        settlement=settlement,', '        rates=0.05', '    ), axis=1', ')', 'display(par_yields_monthly)']
 -------------------
 
