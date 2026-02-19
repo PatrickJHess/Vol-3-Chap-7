@@ -31,7 +31,15 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
-launch_buttons:
+  extra_footer: |
+    <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.hostname !== window.location.hostname) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    });
+    </script>launch_buttons:
   thebe: true
   colab_url: "https://colab.research.google.com"
   binderhub_url: "https://mybinder.org"
