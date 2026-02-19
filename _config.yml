@@ -57,7 +57,7 @@ html:
     })();
     </script>
 launch_buttons:
-  thebe: true
+  thebe: false
   colab_url: "https://colab.research.google.com"
   binderhub_url: "https://mybinder.org"
 
