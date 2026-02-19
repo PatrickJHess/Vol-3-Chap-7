@@ -32,14 +32,19 @@ repository:
 html:
   use_issues_button: true
   extra_footer: |
-    <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.hostname !== window.location.hostname) {
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      }
-    });
-    </script>launch_buttons:
+  <script>
+   document.querySelectorAll('a').forEach(link => {
+    // Check if the link is external OR if it's a different repo on your github.io
+    const isExternal = link.hostname !== window.location.hostname;
+    const isDifferentRepo = !link.href.includes(window.location.pathname.split('/')[1]);
+
+    if (isExternal || isDifferentRepo) {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+});
+</script>
+launch_buttons:
   thebe: true
   colab_url: "https://colab.research.google.com"
   binderhub_url: "https://mybinder.org"
