@@ -31,27 +31,30 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
+html:
   extra_footer: |
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const currentRepo = window.location.pathname.split('/')[1];
+    (function() {
+      const updateLinks = () => {
+        // Get the current folder (e.g., "/Financial_Python/")
+        const currentPath = "/" + window.location.pathname.split('/').filter(Boolean)[0] + "/";
+        
+        document.querySelectorAll('a').forEach(link => {
+          const isExternal = link.hostname !== window.location.hostname;
+          // Check if the link's path DOES NOT start with our current folder
+          const isOtherRepo = !link.pathname.startsWith(currentPath);
 
-      document.querySelectorAll('a').forEach(link => {
-        // Only process links that have a hostname (skips mailto:, etc.)
-        if (link.hostname) {
-          const linkRepo = link.pathname.split('/')[1];
-
-          // NEW TAB IF: 
-          // 1. Different Domain (e.g., google.com)
-          // OR 
-          // 2. Same Domain but different Repo folder
-          if (link.hostname !== window.location.hostname || (linkRepo && linkRepo !== currentRepo)) {
+          if (isExternal || isOtherRepo) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
           }
-        }
-      });
-    });
+        });
+      };
+
+      // Run it immediately and again after a short delay to catch dynamic content
+      window.addEventListener('load', updateLinks);
+      setTimeout(updateLinks, 1000); 
+    })();
     </script>
 launch_buttons:
   thebe: true
