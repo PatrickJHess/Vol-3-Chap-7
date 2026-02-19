@@ -1,0 +1,39 @@
+name: Deploy Jupyter Book
+
+# This tells GitHub to run this workflow every time you push to the main branch
+on:
+  push:
+    branches:
+      - main  # Replace this with 'master' if your default branch is named master
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install jupyter-book
+
+    - name: Build the book
+      run: |
+        # Replace '.' with your book's folder name if it is not in the root directory (e.g., 'docs/')
+        jupyter-book build .
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # Replace './_build/html' with './docs/_build/html' if your book is in a 'docs' folder
+        publish_dir: ./_build/html
