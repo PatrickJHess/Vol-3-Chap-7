@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Measuring Interest Rate Risk With Duration &#8212; Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</title>
+    <title>Measuring Interest Rate Risk with Duration &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,6 +45,7 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -60,11 +62,11 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Measuring_Interest_Rate_Risk_With_Duration';</script>
-    <script src="_static/open_new_tab.js?v=408d5d40"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Summarizing Measuring Interest Risk With Duration" href="Chapter_Seven_Summary.html" />
-    <link rel="prev" title="Acessing Data From The FRED Database" href="FRED_Example.html" />
+    <link rel="prev" title="What is duration and why does it matter" href="Define_Duratiion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,7 +154,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -184,12 +186,23 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Define_Duratiion.html">What is duration and why does it matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FRED_Example.html">Acessing Data From The FRED Database</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Measuring Interest Rate Risk with Duration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Seven_Summary.html">Summarizing Measuring Interest Risk With Duration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions_Seven.html">Functions Imported by Chapter Six.</a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Library</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Volume 1: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
 </ul>
 
     </div>
@@ -231,6 +244,73 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Vol-3-Chap-7/master?urlpath=tree/Measuring_Interest_Rate_Risk_With_Duration.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Vol-3-Chap-7/blob/master/Measuring_Interest_Rate_Risk_With_Duration.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
 
 
 <a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2FMeasuring_Interest_Rate_Risk_With_Duration.html&body=Your%20issue%20content%20here." target="_blank"
@@ -343,7 +423,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Measuring Interest Rate Risk With Duration</h1>
+    <h1>Measuring Interest Rate Risk with Duration</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -353,12 +433,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing Libraries, Modules, and Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a Custom Module and Importing Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-duration">Calculating Duration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-calc-duration">The Function <font color="green">calc_duration</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-with-different-maturities-coupons-and-rates"><font color="green">Application: Calculate duration with different maturities, coupons, and rates.</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-the-calc-duration-with-304-fidelity-bonds">Demonstrating the <font color="green">calc_duration</font> with 304 Fidelity Bonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-with-different-maturities-coupons-and-rates"><font color="green">Application: Calculate Duration with Different Maturities, Coupons, and Rates.</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-calc-duration-with-304-fidelity-bonds">Demonstrating <font color="green">calc_duration</font> with 304 Fidelity Bonds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data-for-the-304-bonds">Downloading the Data for the 304 Bonds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-duration-calculations">The Duration Calculations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-the-calculations-mimic-our-discussion-of-duration">Results of the Calculations Mimic our Discussion of Duration</a></li>
@@ -371,17 +454,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-duration-with-par-yields-on-the-first-day-of-the-month">Calculation of Duration with Par Yields on the First Day of the Month</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-ten-and-thirty-year-par-yield-duration-against-par-yields">Graph of Ten and Thirty Year Par Yield Duration Against Par Yields.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-relation-between-duration-and-coupon">Negative Relation between Duration and Coupon</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025">Graph of Par Yield duration between January 1990 and December 2025</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-duration-of-bonds-with-5-coupon-against-par-yields">Graphing duration of bonds with 5% coupon against par yields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-and-coupon-for-constant-yield-to-maturity">Duration and coupon for constant yield to maturity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity">Fixing the coupon and changing the rate or yield to maturity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-at-different-yields-to-maturity"><font color="green">Application: Calculate Duration At Different Yields To Maturity</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025">Graph of Par Yield Duration between January 1990 and December 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-and-coupon-for-constant-5-yield-to-maturity">Duration and Coupon for Constant 5% Yield to Maturity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity">Fixing the Coupon and Changing the Rate or Yield to Maturity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-at-different-yields-to-maturity"><font color="green">Application: Calculate Duration at Different Yields to Maturity</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started">Some suggestions to get you started.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions">Here is the link where you can copy and paste the questions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a></li>
 </ul>
             </nav>
         </div>
@@ -394,9 +472,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="measuring-interest-rate-risk-with-duration">
-<h1>Measuring Interest Rate Risk With Duration<a class="headerlink" href="#measuring-interest-rate-risk-with-duration" title="Link to this heading">#</a></h1>
+<h1>Measuring Interest Rate Risk with Duration<a class="headerlink" href="#measuring-interest-rate-risk-with-duration" title="Link to this heading">#</a></h1>
+<section id="preparing-the-notebook">
+<h2>Preparing the Notebook<a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
 <section id="importing-libraries-modules-and-functions">
-<h2>Importing Libraries, Modules, and Functions<a class="headerlink" href="#importing-libraries-modules-and-functions" title="Link to this heading">#</a></h2>
+<h3>Importing libraries, modules, and functions<a class="headerlink" href="#importing-libraries-modules-and-functions" title="Link to this heading">#</a></h3>
 <p>As in earlier chapters of the volume, modules that are included in the standard Python library are imported. When necessary, other modules or libraries are installed before they are imported.<span class="math notranslate nohighlight">\(^{2}\)</span>.  Because pandas_data_reader is not part of the Pandas library, it is imported and when necessary installed.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import sys
 import requests
@@ -466,30 +546,31 @@ except:
 </div>
 </div>
 </section>
+</section>
 <section id="adding-a-custom-module-and-importing-functions">
 <h2>Adding a Custom Module and Importing Functions<a class="headerlink" href="#adding-a-custom-module-and-importing-functions" title="Link to this heading">#</a></h2>
 <p>The notebook utilizes the custom module, <strong>module_basic_concepts_fixed_income</strong>, sourced from Dropbox and named <strong>basic_concepts_fixed_income</strong>. This module provides five core functions to streamline the focus on financial concepts:</p>
 <ul>
-<li><p><strong>bond_pay_data</strong> (Chapter Three): Returns the payment dates and amounts.</p>
+<li><p><strong>bond_pay_data</strong> (<a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/Bond_Pay_Dates.html#bond-payment-dates">Chapter Three</a>): Returns the payment dates and amounts.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/bond_pay_data.html#bond-pay-data-helper-function">View Details</a></p></li>
 </ul>
-<p><strong>calc_ytm</strong> (Chapter Six): Returns the yield to maturity for bond with a known price, maturity, coupon, and settlement date..</p>
+<p><strong>calc_ytm</strong> (<a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/Calculating_Yields_To_Maturity.html#adding-yield-to-maturity-to-bond-data">Chapter Six</a>: Returns the yield to maturity for bond with a known price, maturity, coupon, and settlement date..</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/calc_ytm.html">View Details</a></p></li>
 </ul>
 </li>
-<li><p><strong>bond_pv</strong> (Chapter Six): Returns the present value of a bond.</p>
+<li><p><strong>bond_pv</strong> (<a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/Calculating_Yields_To_Maturity.html#demonstrating-bond-pv">Chapter Six</a>): Returns the present value of a bond.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/bond_pv.html">View Details</a></p></li>
 </ul>
 </li>
-<li><p><strong>accrued_interest</strong> (Chapter Two): Returns the payment dates and amounts.</p>
+<li><p><strong>accrued_interest</strong> (<a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/Chapter_Two_Accrued_Interest.html#calculating-accrued-interest-for-five-bonds-dataframe">Chapter Two</a>): Returns the payment dates and amounts.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/accrued_interest.html">View Details</a></p></li>
 </ul>
 </li>
-<li><p><strong>one_y_axis</strong> (Chapter One): Plots the yields to maturity of the 304 bonds.</p>
+<li><p><strong>one_y_axis</strong> (<a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html#graphing-the-spot-and-forward-rates-for-september-30-2025">Chapter One</a>): Plots the yields to maturity of the 304 bonds.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/one_y_axis.html">View Details</a></p></li>
 </ul>
@@ -541,7 +622,7 @@ except:
 <section id="calculating-duration">
 <h2>Calculating Duration<a class="headerlink" href="#calculating-duration" title="Link to this heading">#</a></h2>
 <p>Duration equals minus the first derivative divided by the value of the bond.</p>
-<p>In the code below <font color='green'>bond_paydata</font> and <font color='green'>bond_pv</font> functions are called.  The <font color='green'>calc_ytm</font> function is only called when <font color='green'>rates</font> is assigned None or a value less than or equal to zero. In the code below an iterable (list) is assigned, but a scalar may be assigned as well.</p>
+<p>In the code below <font color='green'>bond_paydata</font> and <font color='green'>bond_pv</font> functions are called.  The <font color='green'>calc_ytm</font> function is only called when <font color='green'>rates</font> is assigned None or a value less than or equal to zero. An iterable (list) is assigned, but a scalar may be assigned as well.</p>
 <p>Because <font color='green'>price</font> is 100, the bond has a par yield equal to the value assigned to <font color='green'>coupon</font>.  Because the calculation of yield to maturity assumes continuous compounding, the yield is less than the value assigned to <font color='green'>coupon</font>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -601,8 +682,8 @@ except:
 </section>
 <section id="the-function-calc-duration">
 <h2>The Function <font color='green'>calc_duration</font><a class="headerlink" href="#the-function-calc-duration" title="Link to this heading">#</a></h2>
-<p>The function calculates duration of a bond.  Arguments must be passed for the bond’s price, maturity, and coupon.  Settlement defaults to the current date and the frequency of payment to semi-annual.</p>
-<p>Arugments must be:</p>
+<p>The function calculates the duration of a bond.  Arguments must be passed for the bond’s price, maturity, and coupon.  Settlement defaults to the current date and the frequency of payment to semi-annual.</p>
+<p>Arguments must be:</p>
 <ul class="simple">
 <li><p>maturity and settlement must be date or datetime objects</p></li>
 <li><p>price and coupon must be floating points or integers</p></li>
@@ -626,7 +707,7 @@ except:
 <span class="sd">  &#39;&#39;&#39;</span>
   <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
-  <span class="c1"># check setlement</span>
+  <span class="c1"># check settlement</span>
   <span class="k">if</span> <span class="n">settlement</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
   <span class="c1"># calculation of rates</span>
@@ -665,7 +746,7 @@ except:
 </div>
 </section>
 <section id="application-calculate-duration-with-different-maturities-coupons-and-rates">
-<h2><font color='green'>Application: Calculate duration with different maturities, coupons, and rates.</font><a class="headerlink" href="#application-calculate-duration-with-different-maturities-coupons-and-rates" title="Link to this heading">#</a></h2>
+<h2><font color='green'>Application: Calculate Duration with Different Maturities, Coupons, and Rates.</font><a class="headerlink" href="#application-calculate-duration-with-different-maturities-coupons-and-rates" title="Link to this heading">#</a></h2>
 <div style="
     border-left: 12px solid green;
     line-height: 1.5;
@@ -702,10 +783,10 @@ except:
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=18JPuNdiU19-">Chapter Seven Hints: Calculate duration with different maturities, coupons, and rates.</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=18JPuNdiU19-">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-hints">Chapter Seven Hints: Calculate duration with different maturities, coupons, and rates.</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-results">expected results here</a>.</p>
 </div></section>
-<section id="demonstrating-the-calc-duration-with-304-fidelity-bonds">
-<h2>Demonstrating the <font color='green'>calc_duration</font> with 304 Fidelity Bonds<a class="headerlink" href="#demonstrating-the-calc-duration-with-304-fidelity-bonds" title="Link to this heading">#</a></h2>
+<section id="demonstrating-calc-duration-with-304-fidelity-bonds">
+<h2>Demonstrating <font color='green'>calc_duration</font> with 304 Fidelity Bonds<a class="headerlink" href="#demonstrating-calc-duration-with-304-fidelity-bonds" title="Link to this heading">#</a></h2>
 <p>Duration is calculated for the 304 bonds that are downloaded from DropBox</p>
 </section>
 <section id="downloading-the-data-for-the-304-bonds">
@@ -879,8 +960,8 @@ except:
 <section id="the-duration-calculations">
 <h2>The Duration Calculations<a class="headerlink" href="#the-duration-calculations" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>The <font color='green'>accrued_interest</font> function is needed to calculate transaction prices.</p></li>
 <li><p>The <font color='green'>calc_duration</font> function calculates the duration but requires the transaction prices for <font color='green'>calc_ytm</font>.</p></li>
+<li><p>The <font color='green'>accrued_interest</font> function is needed to calculate transaction prices.</p></li>
 <li><p>The Pandas <font color='green'>apply</font> method is used to calculate the <em>Accrued</em> and <em>Duration</em> columns of the <font color='green'>bond_data</font> DataFrame.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1080,18 +1161,18 @@ except:
 <h2>Results of the Calculations Mimic our Discussion of Duration<a class="headerlink" href="#results-of-the-calculations-mimic-our-discussion-of-duration" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Duration for the first five bonds equals the number of days between their maturity and the settlement date of January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 divided by 365.25.</p></li>
-<li><p>The last bond has a maturity of five years and ten days and its duration is sighlty more than four and half years.</p></li>
-<li><p>The difference (4.5345 versis 4.4859) in the durations of the bonds maturity on December 31<span class="math notranslate nohighlight">\(^{st}\)</span> is inversely related to their respective coupons (3.875 versus 4.375).</p></li>
+<li><p>The last bond has a maturity of five years and 10 days and its duration is slightly more than four and half years.</p></li>
+<li><p>The difference (4.5648 versus 4.4866) in the durations of the bonds maturity on December 31<span class="math notranslate nohighlight">\(^{st}\)</span> is inversely related to their respective coupons 4.375 versus 3.500).</p></li>
 </ul>
 </section>
 <section id="the-relation-between-coupon-rates-and-duration">
 <h2>The Relation between Coupon Rates and Duration<a class="headerlink" href="#the-relation-between-coupon-rates-and-duration" title="Link to this heading">#</a></h2>
-<p>The relation between and coupon rates and durations is demonstrated with historical par yields.  The six-month, ten-year, and thirty-year par yields are downloaded from the FRED database.</p>
+<p>The relation between coupon rates and durations is demonstrated with historical par yields.  The six-month, ten-year, and thirty-year par yields are downloaded from the FRED database. FRED refers to par yields as yields on constant maturity U.S Treasury securities.</p>
 </section>
 <section id="use-pandas-reader-to-access-par-yield-data-from-fred-between-january-1-st-1990-and-december-31-st-2025">
 <h2>Use Pandas Reader to Access Par Yield Data from FRED between January 1<span class="math notranslate nohighlight">\(^{st}\)</span> 1990 and December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2025<a class="headerlink" href="#use-pandas-reader-to-access-par-yield-data-from-fred-between-january-1-st-1990-and-december-31-st-2025" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Six-month Par Yields</strong>: series id <font color='green'>dgs6</font></p></li>
+<li><p><strong>Six-month Par Yields</strong>: series id <font color='green'>dgs6mo</font></p></li>
 <li><p><strong>Ten-year U.S. Treasury Par Yields</strong>: series id <font color='green'>dgs10</font></p></li>
 <li><p><strong>Thirty-year U.S. Treasury Par Yields</strong>: series id <font color='green'>dgs30</font></p></li>
 </ul>
@@ -1102,12 +1183,11 @@ except:
 <span class="n">end_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
 
 <span class="c1"># series ids</span>
-<span class="n">series_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dgs6mo&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;dgs10&#39;</span><span class="p">,</span><span class="s1">&#39;dgs30&#39;</span><span class="p">]</span>
-<span class="c1"># use pandas reader to get data from fred</span>
+<span class="n">series_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dgs6mo&#39;</span><span class="p">,</span><span class="s1">&#39;dgs10&#39;</span><span class="p">,</span><span class="s1">&#39;dgs30&#39;</span><span class="p">]</span>
+<span class="c1"># use pandas reader to get data from Fred</span>
 <span class="n">par_yields_daily</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">get_data_fred</span><span class="p">(</span><span class="n">series_ids</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
 
-<span class="c1"># if any values are missking drop the row</span>
+<span class="c1"># if any values are missing drop the row</span>
 <span class="n">par_yields_daily</span> <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">par_yields_daily</span> <span class="p">)</span>
 </pre></div>
@@ -1228,7 +1308,7 @@ except:
 <span class="n">min_par_yields</span><span class="o">=</span><span class="p">[</span><span class="n">par_yields_daily</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">par_yields_daily</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
 <span class="n">max_par_yields</span><span class="o">=</span><span class="p">[</span><span class="n">par_yields_daily</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">par_yields_daily</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
 
-<span class="c1"># display minimum and maxium values</span>
+<span class="c1"># display minimum and maximum values</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Minimum Par Yields&#39;</span><span class="p">:</span><span class="n">min_par_yields</span><span class="p">,</span>
               <span class="s1">&#39;Maximum Par Yields&#39;</span><span class="p">:</span><span class="n">max_par_yields</span><span class="p">},</span>
              <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Six-Month Par Yield&#39;</span><span class="p">,</span>
@@ -1292,48 +1372,40 @@ except:
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Maturity</p></th>
-<th class="head"><p>Coupon</p></th>
+<th class="head"><p>Minimum Coupon</p></th>
+<th class="head"><p>Maximum Coupon</p></th>
 <th class="head"><p>Rate</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>   June 30<span class="math notranslate nohighlight">\(^{th}\)</span> 2026</p></td>
 <td><p>   0.02</p></td>
-<td><p> 4.50%</p></td>
-</tr>
-<tr class="row-odd"><td><p>   June 30<span class="math notranslate nohighlight">\(^{th}\)</span> 2026</p></td>
 <td><p>   8.49</p></td>
 <td><p> 4.50%</p></td>
 </tr>
-<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
-<td><p>   0.52</p></td>
-<td><p> 4.75%</p></td>
-</tr>
 <tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
+<td><p>   0.52</p></td>
 <td><p>   9.09</p></td>
 <td><p> 4.75%</p></td>
 </tr>
 <tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
 <td><p>   0.99</p></td>
-<td><p> 5.00%</p></td>
-</tr>
-<tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
 <td><p>   9.18</p></td>
 <td><p> 5.00%</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=m-SmcqAcL1FZ">Chapter Seven Hints: Calculate Duration with Minimum and Maximum Par Yields</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=m-SmcqAcL1FZ">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-hints">Chapter Seven Hints: Calculate Duration with Minimum and Maximum Par Yields</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-results">expected results here</a>.</p>
 </div></section>
 <section id="relation-between-par-yields-and-duration-of-bonds-issued-at-par">
 <h2>Relation between Par Yields and Duration of Bonds Issued at Par.<a class="headerlink" href="#relation-between-par-yields-and-duration-of-bonds-issued-at-par" title="Link to this heading">#</a></h2>
-<p>To illustrate the relation we look at the par yields on the first settlement day of each month.  Because the first day of a month is often not a settlement date, we can’t simply use the <font color='green'>is_month_start</font> attribute.  Instead:</p>
+<p>You could, of course, use all 9,005 days to illustrate the relation between coupons and duration. It’s sufficient to look at the par yields on the first settlement day of each month, and that’s what we do here.  Because the first day of a month is often not a settlement date, we can’t simply use the <font color='green'>is_month_start</font> attribute.  Instead:</p>
 <ol class="arabic simple">
 <li><p>the method <font color='green'>to_period</font> is used to convert the dates of the index to years and months.</p></li>
 <li><p>the  <font color='green'>duplicated</font> method returns True if a value repeats an existing value; otherwise False.</p></li>
-<li><p>the tilde (<font color='green'>~</font>) negates the value returned by <font color='green'>duplicated</font></p></li>
-<li><p>the DataFrame <font color='green'>par_yields_monthly</font> includes the first yield occurence of every month.</p></li>
+<li><p>the tilde (<font color='green'>~</font>) negates the value returned by <font color='green'>duplicated</font>.</p></li>
+<li><p>the DataFrame <font color='green'>par_yields_monthly</font> includes the first yield occurrence of every month.</p></li>
 </ol>
 </section>
 <section id="get-par-yields-for-first-day-of-the-month">
@@ -1634,7 +1706,7 @@ except:
     <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ten And Thrity Year Duration Coupon And YTM From Par Yields&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Coupons = Par Yields: Ten And Thirty Year Duration&#39;</span>
 
 <span class="c1"># Define the names for the data series that will appear in the plot&#39;s legend.</span>
 <span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ten Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty Year&#39;</span><span class="p">]</span>
@@ -1645,7 +1717,7 @@ except:
 <span class="c1"># Define the label for the x-axis.</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Thirty Year Par Yield&#39;</span>
 
-<span class="c1">#&#39;data&#39; contains two series (spot and forward rates).</span>
+<span class="c1">#&#39;data&#39; contains two series (ten and thirty durations).</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># Define markers for the plot.</span>
@@ -1672,7 +1744,7 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2546091f0bf30b39c330954a264154f3dddf32b6d038800530200baa69f4f478.png" src="_images/2546091f0bf30b39c330954a264154f3dddf32b6d038800530200baa69f4f478.png" />
+<img alt="_images/57376563f836ffec3ea9cefb7331580de06c7e667ace1ae9f0fa72a82fca002c.png" src="_images/57376563f836ffec3ea9cefb7331580de06c7e667ace1ae9f0fa72a82fca002c.png" />
 </div>
 </div>
 </section>
@@ -1681,9 +1753,9 @@ except:
 <p>Consistent with our earlier conversation, duration decreases as the yield to maturity increases. The slight curvature observed in the graphs reflects the strong relationship between coupons (par yields) and the yield to maturity (par yields adjusted for continuous versus semi-annual compounding).</p>
 </section>
 <section id="graph-of-par-yield-duration-between-january-1990-and-december-2025">
-<h2>Graph of Par Yield duration between January 1990 and December 2025<a class="headerlink" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025" title="Link to this heading">#</a></h2>
+<h2>Graph of Par Yield Duration between January 1990 and December 2025<a class="headerlink" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025" title="Link to this heading">#</a></h2>
 <p>The time series analysis of par yield durations reveals a strong inverse relationship between par yields and duration. This is consistent with the steady decline in interest rates, and consequently par yields, observed between January 1990 and December 2025.</p>
-<p>A significant shift occurred beginning in early 2007, and more dramatically in late 2008 and 2009, when the Federal Reserve actively intervened in financial markets. This intervention involved a substantial expansion of its balance sheet through the purchase of mortgages and Treasury bonds. These bond purchases suppressed interest rates, resulting in higher duration estimates.</p>
+<p>A significant shift in yields occurred beginning in early 2007, and more dramatically in late 2008 and 2009, when the Federal Reserve actively intervened in financial markets. This intervention involved a substantial expansion of its balance sheet through the purchase of mortgages and Treasury bonds. These bond purchases suppressed interest rates, resulting in higher duration estimates.</p>
 <p>For investors, this policy presented a dual risk. While the expansion or maintenance of the Fed’s balance sheet ensured bond price stability, the eventual unwinding of the balance sheet was inevitable. This unwinding materialized in 2022, when the secured overnight financing rate (SOFR) escalated sharply from 0.05% in March 2022 to 5.33% in August 2023. By the end of 2025, the rate had moderated to 3.75%. The pattern observed in the plot of par yield durations closely mirrors these events.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1694,7 +1766,7 @@ except:
     <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ten And Thrity Year Duration Coupon And YTM From Par Yields&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ten And Thirty Year: 1/1/1990 to 12/31/2025&#39;</span>
 
 <span class="c1"># Define the names for the data series that will appear in the plot&#39;s legend.</span>
 <span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ten Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty Year&#39;</span><span class="p">]</span>
@@ -1705,7 +1777,7 @@ except:
 <span class="c1"># Define the label for the x-axis.</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Dates&#39;</span>
 
-<span class="c1">#&#39;data&#39; contains two series (spot and forward rates).</span>
+<span class="c1">#&#39;data&#39; contains two series (ten and thirty durations).</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># Define markers for the plot.</span>
@@ -1732,16 +1804,12 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/fb2c75d15c605c5d0744a3c946a1bca1a1b6b9a56d0c348d91a449cce691b984.png" src="_images/fb2c75d15c605c5d0744a3c946a1bca1a1b6b9a56d0c348d91a449cce691b984.png" />
+<img alt="_images/09662a803a3e647fa66a19399f8748d2dbc3173d42b1a5534d58ab8317be4af3.png" src="_images/09662a803a3e647fa66a19399f8748d2dbc3173d42b1a5534d58ab8317be4af3.png" />
 </div>
 </div>
 </section>
-<section id="graphing-duration-of-bonds-with-5-coupon-against-par-yields">
-<h2>Graphing duration of bonds with 5% coupon against par yields<a class="headerlink" href="#graphing-duration-of-bonds-with-5-coupon-against-par-yields" title="Link to this heading">#</a></h2>
-<p>The</p>
-</section>
-<section id="duration-and-coupon-for-constant-yield-to-maturity">
-<h2>Duration and coupon for constant yield to maturity<a class="headerlink" href="#duration-and-coupon-for-constant-yield-to-maturity" title="Link to this heading">#</a></h2>
+<section id="duration-and-coupon-for-constant-5-yield-to-maturity">
+<h2>Duration and Coupon for Constant 5% Yield to Maturity<a class="headerlink" href="#duration-and-coupon-for-constant-5-yield-to-maturity" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># settlement date is arbitrarily set for December 31, 2025</span>
@@ -1775,158 +1843,158 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_9132</span><span class="o">/</span><span class="mf">218680082.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># thirty year par yields</span>
-<span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">par_yields_monthly</span><span class="p">[</span><span class="s1">&#39;Duration Thirty Rate 5%&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">par_yields_monthly</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_duration</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>         <span class="n">maturity</span><span class="o">=</span><span class="n">maturity_30</span><span class="p">,</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py</span> in <span class="ni">apply</span><span class="nt">(self, func, axis, raw, result_type, args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">8738</span>             <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">8739</span>         <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">8740</span>         <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">8741</span> 
-<span class="g g-Whitespace">   </span><span class="mi">8742</span>     <span class="k">def</span><span class="w"> </span><span class="nf">applymap</span><span class="p">(</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/pandas/core/apply.py</span> in <span class="ni">apply</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">686</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_raw</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">687</span> 
-<span class="ne">--&gt; </span><span class="mi">688</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">689</span> 
-<span class="g g-Whitespace">    </span><span class="mi">690</span>     <span class="k">def</span><span class="w"> </span><span class="nf">agg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/pandas/core/apply.py</span> in <span class="ni">apply_standard</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="g g-Whitespace">    </span><span class="mi">811</span>     <span class="k">def</span><span class="w"> </span><span class="nf">apply_standard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">812</span>         <span class="n">results</span><span class="p">,</span> <span class="n">res_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_series_generator</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">813</span> 
-<span class="g g-Whitespace">    </span><span class="mi">814</span>         <span class="c1"># wrap results</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/pandas/core/apply.py</span> in <span class="ni">apply_series_generator</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">826</span>             <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">series_gen</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">827</span>                 <span class="c1"># ignore SettingWithCopy here in case the user mutates</span>
-<span class="ne">--&gt; </span><span class="mi">828</span>                 <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">829</span>                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">830</span>                     <span class="c1"># If we have a view on v, we need to make a copy because</span>
-
-<span class="nn">/tmp/ipykernel_9132/218680082.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># thirty year par yields</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">par_yields_monthly</span><span class="p">[</span><span class="s1">&#39;Duration Thirty Rate 5%&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">par_yields_monthly</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
-<span class="ne">---&gt; </span><span class="mi">20</span>     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_duration</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>         <span class="n">maturity</span><span class="o">=</span><span class="n">maturity_30</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>         <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;dgs30&#39;</span><span class="p">],</span>
-
-<span class="nn">/tmp/ipykernel_9132/4222579554.py</span> in <span class="ni">calc_duration</span><span class="nt">(maturity, coupon, price, rates, settlement, freq)</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span> 
-<span class="g g-Whitespace">     </span><span class="mi">40</span>   <span class="c1"># data for bond_pv function</span>
-<span class="ne">---&gt; </span><span class="mi">41</span>   <span class="n">pay_data</span><span class="o">=</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span>   <span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pay_data&#39;</span><span class="p">:</span><span class="n">pay_data</span><span class="p">,</span><span class="s1">&#39;settlement&#39;</span><span class="p">:</span><span class="n">settlement</span><span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="w"> </span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">bond_pay_data</span><span class="nt">(maturity, coupon, settlement, freq)</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">adjust_bond_pay_dates</span><span class="nt">(scheduled_date)</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/registry.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Create a new instance of a lazy-loaded entity.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_entity</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">307</span>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc, operator]</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span> 
-<span class="g g-Whitespace">    </span><span class="mi">309</span>     <span class="k">def</span><span class="w"> </span><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/countries/united_states.py</span> in <span class="ni">__init__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>         <span class="c1"># B-11252 February 27th, 1953 32 COMP. GEN. 378.</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span>         <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;observed_since&quot;</span><span class="p">,</span> <span class="mi">1953</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">250</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">251</span> 
-<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_populate_common</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_federal</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/observed_holiday_base.py</span> in <span class="ni">__init__</span><span class="nt">(self, observed_rule, observed_since, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_observed_rule</span> <span class="o">=</span> <span class="n">observed_rule</span> <span class="ow">or</span> <span class="n">ObservedRule</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_observed_since</span> <span class="o">=</span> <span class="n">observed_since</span>
-<span class="ne">--&gt; </span><span class="mi">116</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span> 
-<span class="g g-Whitespace">    </span><span class="mi">118</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_is_observed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/holiday_base.py</span> in <span class="ni">__init__</span><span class="nt">(self, years, expand, observed, subdiv, prov, state, language, categories)</span>
-<span class="g g-Whitespace">    </span><span class="mi">380</span>         <span class="c1"># Populate holidays.</span>
-<span class="g g-Whitespace">    </span><span class="mi">381</span>         <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">years</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">382</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">383</span> 
-<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;HolidayBase&quot;</span><span class="p">,</span> <span class="s2">&quot;HolidaySum&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">&quot;HolidayBase&quot;</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/holiday_base.py</span> in <span class="ni">_populate</span><span class="nt">(self, year)</span>
-<span class="g g-Whitespace">    </span><span class="mi">894</span> 
-<span class="g g-Whitespace">    </span><span class="mi">895</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">=</span> <span class="n">year</span>
-<span class="ne">--&gt; </span><span class="mi">896</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_populate_common_holidays</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">897</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_populate_subdiv_holidays</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">898</span> 
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/observed_holiday_base.py</span> in <span class="ni">_populate_common_holidays</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_populate_common_holidays</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Populate entity common holidays.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">223</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_populate_common_holidays</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span> 
-<span class="g g-Whitespace">    </span><span class="mi">225</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">observed</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_special_holidays</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/holiday_base.py</span> in <span class="ni">_populate_common_holidays</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span>         <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sorted_categories</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">902</span>             <span class="k">if</span> <span class="n">pch_method</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_populate_</span><span class="si">{</span><span class="n">category</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">_holidays&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">903</span>                 <span class="n">pch_method</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">904</span> 
-<span class="g g-Whitespace">    </span><span class="mi">905</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_special_holidays</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/countries/united_states.py</span> in <span class="ni">_populate_public_holidays</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span> 
-<span class="g g-Whitespace">    </span><span class="mi">365</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_populate_public_holidays</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">366</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_populate_common</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">367</span> 
-<span class="g g-Whitespace">    </span><span class="mi">368</span>         <span class="k">if</span> <span class="mi">1888</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">&lt;=</span> <span class="mi">1970</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/holidays/countries/united_states.py</span> in <span class="ni">_populate_common</span><span class="nt">(self, include_federal)</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">&gt;=</span> <span class="mi">1971</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>             <span class="c1"># Memorial Day.</span>
-<span class="ne">--&gt; </span><span class="mi">302</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_add_holiday_last_mon_of_may</span><span class="p">(</span><span class="n">tr</span><span class="p">(</span><span class="s2">&quot;Memorial Day&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span> 
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">&gt;=</span> <span class="mi">2021</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/gettext.py</span> in <span class="ni">gettext</span><span class="nt">(message)</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span> 
-<span class="g g-Whitespace">    </span><span class="mi">741</span> <span class="k">def</span><span class="w"> </span><span class="nf">gettext</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">742</span>     <span class="k">return</span> <span class="n">dgettext</span><span class="p">(</span><span class="n">_current_domain</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span> 
-<span class="g g-Whitespace">    </span><span class="mi">744</span> <span class="k">def</span><span class="w"> </span><span class="nf">lgettext</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/gettext.py</span> in <span class="ni">dgettext</span><span class="nt">(domain, message)</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span> <span class="k">def</span><span class="w"> </span><span class="nf">dgettext</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">666</span>         <span class="n">t</span> <span class="o">=</span> <span class="n">translation</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">_localedirs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">667</span>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">668</span>         <span class="k">return</span> <span class="n">message</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/gettext.py</span> in <span class="ni">translation</span><span class="nt">(domain, localedir, languages, class_, fallback, codeset)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="k">if</span> <span class="n">class_</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>         <span class="n">class_</span> <span class="o">=</span> <span class="n">GNUTranslations</span>
-<span class="ne">--&gt; </span><span class="mi">587</span>     <span class="n">mofiles</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">localedir</span><span class="p">,</span> <span class="n">languages</span><span class="p">,</span> <span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">mofiles</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">589</span>         <span class="k">if</span> <span class="n">fallback</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/gettext.py</span> in <span class="ni">find</span><span class="nt">(domain, localedir, languages, all)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="k">if</span> <span class="n">lang</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="k">break</span>
-<span class="ne">--&gt; </span><span class="mi">569</span>         <span class="n">mofile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">localedir</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="s1">&#39;LC_MESSAGES&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.mo&#39;</span> <span class="o">%</span> <span class="n">domain</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">mofile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">571</span>             <span class="k">if</span> <span class="nb">all</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dgs6mo</th>
+      <th>dgs10</th>
+      <th>dgs30</th>
+      <th>Duration Ten</th>
+      <th>Duration Thirty</th>
+      <th>Duration Ten Rate 5%</th>
+      <th>Duration Thirty Rate 5%</th>
+    </tr>
+    <tr>
+      <th>DATE</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1990-01-02</th>
+      <td>7.89</td>
+      <td>7.94</td>
+      <td>8.00</td>
+      <td>7.083136</td>
+      <td>11.763721</td>
+      <td>7.395215</td>
+      <td>14.459489</td>
+    </tr>
+    <tr>
+      <th>1990-02-01</th>
+      <td>8.13</td>
+      <td>8.42</td>
+      <td>8.44</td>
+      <td>6.950784</td>
+      <td>11.313746</td>
+      <td>7.319505</td>
+      <td>14.333849</td>
+    </tr>
+    <tr>
+      <th>1990-03-01</th>
+      <td>8.19</td>
+      <td>8.59</td>
+      <td>8.61</td>
+      <td>6.904859</td>
+      <td>11.147811</td>
+      <td>7.293754</td>
+      <td>14.288248</td>
+    </tr>
+    <tr>
+      <th>1990-04-02</th>
+      <td>8.23</td>
+      <td>8.65</td>
+      <td>8.63</td>
+      <td>6.888766</td>
+      <td>11.128568</td>
+      <td>7.284792</td>
+      <td>14.282984</td>
+    </tr>
+    <tr>
+      <th>1990-05-01</th>
+      <td>8.49</td>
+      <td>9.08</td>
+      <td>9.04</td>
+      <td>6.775186</td>
+      <td>10.746534</td>
+      <td>7.222431</td>
+      <td>14.179501</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-08-01</th>
+      <td>4.16</td>
+      <td>4.23</td>
+      <td>4.81</td>
+      <td>8.255865</td>
+      <td>16.174735</td>
+      <td>8.184124</td>
+      <td>15.898275</td>
+    </tr>
+    <tr>
+      <th>2025-09-02</th>
+      <td>3.99</td>
+      <td>4.28</td>
+      <td>4.97</td>
+      <td>8.238098</td>
+      <td>15.892981</td>
+      <td>8.170272</td>
+      <td>15.792071</td>
+    </tr>
+    <tr>
+      <th>2025-10-01</th>
+      <td>3.80</td>
+      <td>4.12</td>
+      <td>4.72</td>
+      <td>8.295160</td>
+      <td>16.336701</td>
+      <td>8.215008</td>
+      <td>15.960435</td>
+    </tr>
+    <tr>
+      <th>2025-11-03</th>
+      <td>3.80</td>
+      <td>4.13</td>
+      <td>4.69</td>
+      <td>8.291576</td>
+      <td>16.391257</td>
+      <td>8.212177</td>
+      <td>15.981559</td>
+    </tr>
+    <tr>
+      <th>2025-12-01</th>
+      <td>3.75</td>
+      <td>4.09</td>
+      <td>4.74</td>
+      <td>8.305927</td>
+      <td>16.300488</td>
+      <td>8.223530</td>
+      <td>15.946465</td>
+    </tr>
+  </tbody>
+</table>
+<p>432 rows × 7 columns</p>
+</div></div></div>
 </div>
 <p>When deriving the yield to maturity (YTM) from par yields, the influence of coupon rates is magnified because lower coupons are matched with lower YTMs and higher coupons are matched with higher YTMs. By fixing the YTM, the focus shifts to the coupon effect. This results in a curve that relates duration and coupon rates. When the YTM is fixed, the duration of bonds with the lowest coupons are less than the par yield estimates, and those with the highest coupons are greater.</p>
 <div class="cell docutils container">
@@ -1938,7 +2006,7 @@ except:
     <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ten And Thrity Year Duration With 5% YTM And Par Yields&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Ten And Thirty Year Duration With 5% YTM And Par Yields&#39;</span>
 
 <span class="c1"># Define the names for the data series that will appear in the plot&#39;s legend.</span>
 <span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ten Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty Year&#39;</span><span class="p">]</span>
@@ -1949,7 +2017,7 @@ except:
 <span class="c1"># Define the label for the x-axis.</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Thirty Year Par Yield&#39;</span>
 
-<span class="c1">#&#39;data&#39; contains two series (spot and forward rates).</span>
+<span class="c1">#&#39;data&#39; contains two series (ten and thirty durations).</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># Define markers for the plot.</span>
@@ -1976,23 +2044,19 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>❓ Do you want to save the file? (y/n) (press enter for n): 
-</pre></div>
-</div>
-<p>###<em><strong>❌ File Not Saved</strong></em>.</p>
-<img alt="_images/286ecd191a6598c726cc2435808c4e824d55e1c1aaac43cecca25211be9b1ec5.png" src="_images/286ecd191a6598c726cc2435808c4e824d55e1c1aaac43cecca25211be9b1ec5.png" />
+<img alt="_images/2eafebeb462824df6272705d4717f1a3cfae257e8aa7684da171f0553c399b1f.png" src="_images/2eafebeb462824df6272705d4717f1a3cfae257e8aa7684da171f0553c399b1f.png" />
 </div>
 </div>
 </section>
 <section id="fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity">
-<h2>Fixing the coupon and changing the rate or yield to maturity<a class="headerlink" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity" title="Link to this heading">#</a></h2>
+<h2>Fixing the Coupon and Changing the Rate or Yield to Maturity<a class="headerlink" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity" title="Link to this heading">#</a></h2>
 <p>The interest rate risk for a bondholder is fundamentally summarized by the relationship between a bond’s duration and its yield to maturity (YTM). To demonstrate how YTM influences the duration of a bond with a constant coupon, calculations are performed for both a ten-year and a thirty-year bond, each carrying a five percent coupon rate. The bonds’ YTM is calculated from the monthly ten and thirty par yields.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># settlement date is arbitrarily set for January 31, 2025</span>
 <span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
 
-<span class="c1"># pandas apply method used to calclate duration on monthly intervals</span>
+<span class="c1"># pandas apply method used to calculate duration on monthly intervals</span>
 <span class="c1"># ten year par yields</span>
 <span class="n">par_yields_monthly</span><span class="p">[</span><span class="s1">&#39;Duration Ten 5 Coupon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">par_yields_monthly</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_duration</span><span class="p">(</span>
@@ -2016,9 +2080,7 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-a5529d21-24bb-4a8c-8659-b4b975986cc4" class="colab-df-container">
-    <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2195,145 +2257,7 @@ except:
   </tbody>
 </table>
 <p>432 rows × 9 columns</p>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a5529d21-24bb-4a8c-8659-b4b975986cc4')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-a5529d21-24bb-4a8c-8659-b4b975986cc4 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a5529d21-24bb-4a8c-8659-b4b975986cc4');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-  <div id="id_34d08e67-7d4a-43c6-8d7c-5757bd9bba93">
-    <style>
-      .colab-df-generate {
-        background-color: #E8F0FE;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        fill: #1967D2;
-        height: 32px;
-        padding: 0 0 0 0;
-        width: 32px;
-      }
-
-      .colab-df-generate:hover {
-        background-color: #E2EBFA;
-        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-        fill: #174EA6;
-      }
-
-      [theme=dark] .colab-df-generate {
-        background-color: #3B4455;
-        fill: #D2E3FC;
-      }
-
-      [theme=dark] .colab-df-generate:hover {
-        background-color: #434B5C;
-        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-        fill: #FFFFFF;
-      }
-    </style>
-    <button class="colab-df-generate" onclick="generateWithVariable('par_yields_monthly')"
-            title="Generate code using this dataframe."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
-  </svg>
-    </button>
-    <script>
-      (() => {
-      const buttonEl =
-        document.querySelector('#id_34d08e67-7d4a-43c6-8d7c-5757bd9bba93 button.colab-df-generate');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      buttonEl.onclick = () => {
-        google.colab.notebook.generateWithVariable('par_yields_monthly');
-      }
-      })();
-    </script>
-  </div>
-
-    </div>
-  </div>
-</div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2344,7 +2268,7 @@ except:
     <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Durations: 5% Coupon Yield To Maturity Par Yields&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Durations: 5% Coupon And Yield To Maturity = Par Yields&#39;</span>
 
 <span class="c1"># Define the names for the data series that will appear in the plot&#39;s legend.</span>
 <span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ten Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty Year&#39;</span><span class="p">]</span>
@@ -2355,7 +2279,7 @@ except:
 <span class="c1"># Define the label for the x-axis.</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Thirty Year Par Yield&#39;</span>
 
-<span class="c1">#&#39;data&#39; contains two series (spot and forward rates).</span>
+<span class="c1">#&#39;data&#39; contains two series (ten and thirty durations).</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># Define markers for the plot.</span>
@@ -2382,18 +2306,14 @@ except:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>❓ Do you want to save the file? (y/n) (press enter for n): 
-</pre></div>
-</div>
-<p>###<em><strong>❌ File Not Saved</strong></em>.</p>
-<img alt="_images/33a9e60208b30ef0ea4c7c14ceed1392f3a647b1b1f7959fd2d63316f965608c.png" src="_images/33a9e60208b30ef0ea4c7c14ceed1392f3a647b1b1f7959fd2d63316f965608c.png" />
+<img alt="_images/44da9620ccbaff2f1955b8084e54f279325ae5bc61a0f9bc0dd7e785975c2dc3.png" src="_images/44da9620ccbaff2f1955b8084e54f279325ae5bc61a0f9bc0dd7e785975c2dc3.png" />
 </div>
 </div>
 <p>This graph demonstrates that fixing the coupon highlights the negative relation between duration and yield to maturity. For a thirty-year bond, the duration exhibits notable changes with varying yields to maturity: slightly less than 16 at 5%, slightly less than 17 at 4%, and slightly more than 14.75 at 6%. The differences are less pronounced for the ten-year bond, with the duration being slightly less than eight at 5%, slightly more at 4%, and slightly less again at 6%.</p>
 <p>Understanding duration dynamics is crucial for investors. Because duration decreases as the yield to maturity increases, investors typically experience better outcomes than what is suggested by the duration calculation. Specifically, decreasing rates lead to higher gains, and increasing rates result in smaller losses. This advantageous phenomenon is known as convexity-the focus of the next chapter.</p>
 </section>
 <section id="application-calculate-duration-at-different-yields-to-maturity">
-<h2><font color='green'>Application: Calculate Duration At Different Yields To Maturity<a class="headerlink" href="#application-calculate-duration-at-different-yields-to-maturity" title="Link to this heading">#</a></h2>
+<h2><font color='green'>Application: Calculate Duration at Different Yields to Maturity<a class="headerlink" href="#application-calculate-duration-at-different-yields-to-maturity" title="Link to this heading">#</a></h2>
 <div style="
     border-left: 12px solid green;
     line-height: 1.5;
@@ -2404,38 +2324,28 @@ except:
 <thead>
 <tr class="row-odd"><th class="head"><p>Maturity</p></th>
 <th class="head"><p>Coupon</p></th>
-<th class="head"><p>Rate</p></th>
+<th class="head"><p>Low Rate</p></th>
+<th class="head"><p>Mid Rate</p></th>
+<th class="head"><p>High Rate</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
+<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
 <td><p>   5.00</p></td>
 <td><p> 4.0%</p></td>
+<td><p> 5.0%</p></td>
+<td><p> 6.0%</p></td>
 </tr>
 <tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
 <td><p>   5.00</p></td>
-<td><p> 5.0%</p></td>
-</tr>
-<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
-<td><p>   5.00</p></td>
-<td><p> 6.0%</p></td>
-</tr>
-<tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
-<td><p>   5.00</p></td>
 <td><p> 4.0%</p></td>
-</tr>
-<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
-<td><p>   5.00</p></td>
 <td><p> 5.0%</p></td>
-</tr>
-<tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
-<td><p>   5.00</p></td>
 <td><p> 6.0%</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=OSNW4BGt398p">Chapter Seven Hints: Calculate Duration At Different Yields To Maturity</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=OSNW4BGt398p">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-hints">Chapter Seven Hints: Calculate Duration At Different Yields To Maturity</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-results">expected results here</a>.</p>
 </div></section>
 <section id="chapter-exercise">
 <h2><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h2>
@@ -2449,15 +2359,17 @@ except:
     line-height: 1.5;
     padding: 15px">
 <br>
-Assume that the settlement date is January 31$^{st}$ 2026
+<p><strong>Settlement date is January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2026</strong></p>
 <p>Compare the acutal and duration forecasted rates of change in bond prices.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Maturity</p></th>
 <th class="head"><p>Coupon</p></th>
 <th class="head"><p>Initial YTM</p></th>
-<th class="head"><p>Increased YTM</p></th>
-<th class="head"><p>Decreased YTM</p></th>
+<th class="head"><p>7% YTM</p></th>
+<th class="head"><p>3% YTM</p></th>
+<th class="head"><p>5.25% YTM</p></th>
+<th class="head"><p>4.75% YTM</p></th>
 </tr>
 </thead>
 <tbody>
@@ -2466,44 +2378,32 @@ Assume that the settlement date is January 31$^{st}$ 2026
 <td><p>     5%</p></td>
 <td><p>     7%</p></td>
 <td><p>     3%</p></td>
-</tr>
-<tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
-<td><p>     5.0</p></td>
-<td><p>     5%</p></td>
 <td><p>     5.25%</p></td>
 <td><p>     4.75%</p></td>
-</tr>
-<tr class="row-even"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
-<td><p>     5.0</p></td>
-<td><p>     5%</p></td>
-<td><p>     7%</p></td>
-<td><p>     3%</p></td>
 </tr>
 <tr class="row-odd"><td><p>   December 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2055</p></td>
 <td><p>     5.0</p></td>
 <td><p>     5%</p></td>
+<td><p>     7%</p></td>
+<td><p>     3%</p></td>
 <td><p>     5.25%</p></td>
 <td><p>     4.75%</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1#scrollTo=f9PjphbSk8Ds">Chapter Seven Hints: Compare the Actual and Duration Forecasted Rates of Change in Bond Prices</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=C4BS9et_mhev">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-hints">Chapter Seven Hints: Compare the Actual and Duration Forecasted Rates of Change in Bond Prices</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_Seven_Hints.html#chapter-seven-results">expected results here</a>.</p>
 </div></section>
 <section id="take-a-deeper-dive-with-gemini">
 <h2><font color='green'>Take a deeper dive with Gemini</font><a class="headerlink" href="#take-a-deeper-dive-with-gemini" title="Link to this heading">#</a></h2>
-<section id="some-suggestions-to-get-you-started">
-<h3>Some suggestions to get you started.<a class="headerlink" href="#some-suggestions-to-get-you-started" title="Link to this heading">#</a></h3>
+<p>Some suggestions to get you started.</p>
 <ol class="arabic simple">
 <li><p><strong>Should Property &amp; Casualty and Life Insurance companies own bonds with different or similar durations?</strong></p></li>
 <li><p><strong>How does duration interact with reinvestment rate risk?</strong></p></li>
 <li><p><strong>Do companies use duration to hedge?</strong></p></li>
 <li><p><strong>What term structure risk does duration measure?</strong></p></li>
 </ol>
-</section>
-<section id="here-is-the-link-where-you-can-copy-and-paste-the-questions">
-<h3><a class="reference external" href="https://gemini.google.com">Here is the link where you can copy and paste the questions</a><a class="headerlink" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions" title="Link to this heading">#</a></h3>
-</section>
+<p><a class="reference external" href="https://gemini.google.com">Here is the link where you can copy and paste the questions</a></p>
 </section>
 </section>
 
@@ -2511,7 +2411,7 @@ Assume that the settlement date is January 31$^{st}$ 2026
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -2538,12 +2438,12 @@ Assume that the settlement date is January 31$^{st}$ 2026
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="FRED_Example.html"
+       href="Define_Duratiion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Acessing Data From The FRED Database</p>
+        <p class="prev-next-title">What is duration and why does it matter</p>
       </div>
     </a>
     <a class="right-next"
@@ -2571,12 +2471,15 @@ Assume that the settlement date is January 31$^{st}$ 2026
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing Libraries, Modules, and Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a Custom Module and Importing Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-duration">Calculating Duration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-calc-duration">The Function <font color="green">calc_duration</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-with-different-maturities-coupons-and-rates"><font color="green">Application: Calculate duration with different maturities, coupons, and rates.</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-the-calc-duration-with-304-fidelity-bonds">Demonstrating the <font color="green">calc_duration</font> with 304 Fidelity Bonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-with-different-maturities-coupons-and-rates"><font color="green">Application: Calculate Duration with Different Maturities, Coupons, and Rates.</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-calc-duration-with-304-fidelity-bonds">Demonstrating <font color="green">calc_duration</font> with 304 Fidelity Bonds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data-for-the-304-bonds">Downloading the Data for the 304 Bonds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-duration-calculations">The Duration Calculations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-the-calculations-mimic-our-discussion-of-duration">Results of the Calculations Mimic our Discussion of Duration</a></li>
@@ -2589,17 +2492,12 @@ Assume that the settlement date is January 31$^{st}$ 2026
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-duration-with-par-yields-on-the-first-day-of-the-month">Calculation of Duration with Par Yields on the First Day of the Month</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-ten-and-thirty-year-par-yield-duration-against-par-yields">Graph of Ten and Thirty Year Par Yield Duration Against Par Yields.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-relation-between-duration-and-coupon">Negative Relation between Duration and Coupon</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025">Graph of Par Yield duration between January 1990 and December 2025</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-duration-of-bonds-with-5-coupon-against-par-yields">Graphing duration of bonds with 5% coupon against par yields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-and-coupon-for-constant-yield-to-maturity">Duration and coupon for constant yield to maturity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity">Fixing the coupon and changing the rate or yield to maturity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-at-different-yields-to-maturity"><font color="green">Application: Calculate Duration At Different Yields To Maturity</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-of-par-yield-duration-between-january-1990-and-december-2025">Graph of Par Yield Duration between January 1990 and December 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-and-coupon-for-constant-5-yield-to-maturity">Duration and Coupon for Constant 5% Yield to Maturity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-coupon-and-changing-the-rate-or-yield-to-maturity">Fixing the Coupon and Changing the Rate or Yield to Maturity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-duration-at-different-yields-to-maturity"><font color="green">Application: Calculate Duration at Different Yields to Maturity</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started">Some suggestions to get you started.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions">Here is the link where you can copy and paste the questions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a></li>
 </ul>
   </nav></div>
 
@@ -2624,7 +2522,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by Arbitrage Partners..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>
@@ -2637,17 +2535,6 @@ By Financial Python
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <script>
-document.querySelectorAll('a').forEach(link => {
-  if (link.hostname !== window.location.hostname) {
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
-});
-</script>launch_buttons:
-
-</div>
   </div>
   
 </div>

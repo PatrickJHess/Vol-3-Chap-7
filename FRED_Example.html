@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Acessing Data From The FRED Database &#8212; Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</title>
+    <title>Acessing Data From The FRED Database &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,6 +45,7 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -60,11 +62,9 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'FRED_Example';</script>
-    <script src="_static/open_new_tab.js?v=408d5d40"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Measuring Interest Rate Risk With Duration" href="Measuring_Interest_Rate_Risk_With_Duration.html" />
-    <link rel="prev" title="What is duration and why does it matter" href="Define_Duratiion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,6 +127,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -152,7 +154,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -181,15 +183,26 @@
 <li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Seven</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul class="current">
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Define_Duratiion.html">What is duration and why does it matter</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Acessing Data From The FRED Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk with Duration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Seven_Summary.html">Summarizing Measuring Interest Risk With Duration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions_Seven.html">Functions Imported by Chapter Six.</a></li>
-</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Library</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Volume 1: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
 </ul>
 
     </div>
@@ -231,6 +244,73 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Vol-3-Chap-7/master?urlpath=tree/FRED_Example.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Vol-3-Chap-7/blob/master/FRED_Example.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
 
 
 <a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2FFRED_Example.html&body=Your%20issue%20content%20here." target="_blank"
@@ -353,15 +433,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-short-video-on-fred">A short video on FRED</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">Demonstrating FRED with the FED’s Ownership of Financial Securities</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-increase-in-the-fed-s-financial-market-intervention">Large Increase in the FED’s Financial Market Intervention</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019"><font color="green">Application: Get the secured overnight financing rates for the fourth quarter of 2019.</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started-with-gemini">Some suggestions to get you started with Gemini.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-paste-the-questions-here">Copy and paste the questions here</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a></li>
 </ul>
             </nav>
         </div>
@@ -375,17 +452,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="acessing-data-from-the-fred-database">
 <h1>Acessing Data From The FRED Database<a class="headerlink" href="#acessing-data-from-the-fred-database" title="Link to this heading">#</a></h1>
+<section id="a-short-video-on-fred">
+<h2>A short video on FRED<a class="headerlink" href="#a-short-video-on-fred" title="Link to this heading">#</a></h2>
 <p>This and other chapters will utilize data from the FRED database, maintained by the Federal Reserve Bank of St. Louis. This resource provides valuable data for analyzing a wide range of financial topics, such as bonds, stocks, foreign exchange, and derivatives—information that will be beneficial for this and subsequent volumes, as well as throughout your professional career.</p>
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=WCMvPDsH-Pw" target="_blank">
-    <img src="https://img.youtube.com/vi/WCMvPDsH-Pw/maxresdefault.jpg"
-    alt="Watch Video" style="width:560px; border:2px solid #ccc;" />
-  </a>
-  <br>
-  <em>(Click image to watch on YouTube)</em>
-</div><section id="importing-libraries-modules-and-functions">
+<p><a class="reference external" href="https://drive.google.com/file/d/1qlomCm2NYI7GdNGgZy-_jMpbb7v-CEgj/view?usp=drive_link"><img alt="FRED Video" src="https://drive.google.com/uc?export=view&amp;id=1NJe8PAMSCe--uiWtq5PIC-oF72TsqLLL" /></a></p>
+</section>
+<section id="importing-libraries-modules-and-functions">
 <h2>Importing libraries, modules, and functions<a class="headerlink" href="#importing-libraries-modules-and-functions" title="Link to this heading">#</a></h2>
-<p>As in earlier chapters of the volume, modules that are included in the standard Python library are imported. A new module, <strong>pandas_datarader</strong>, is imported. Because it is not part of the Pandas library, it has to be imported and when necessary installed.  The module is convenient because it:</p>
+<p>As in earlier chapters of the volume, modules that are included in the standard Python library are imported. A new module, <strong>pandas_datareader</strong>, is imported. Because it is not part of the Pandas library, it has to be imported and when necessary installed.  The module is convenient because it:</p>
 <ul class="simple">
 <li><p><strong>Does not</strong> require an API key to access FRED data.</p></li>
 <li><p>Returns results as <strong>Pandas DataFrames</strong></p></li>
@@ -407,7 +481,6 @@ except:
 <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span>  <span class="n">date</span>
 
 <span class="c1"># Import the pandas library for data manipulation and analysis, aliased as pd.</span>
-
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">pandas_datareader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdr</span>
 <span class="k">except</span><span class="p">:</span>
@@ -533,21 +606,17 @@ except:
 </section>
 <section id="application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019">
 <h2><font color='green'>Application: Get the secured overnight financing rates for the fourth quarter of 2019.<a class="headerlink" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019" title="Link to this heading">#</a></h2>
-<p>see <a class="reference external" href="https://colab.research.google.com/drive/1ZMO2gJ56kCFUXS4zUhljrW5Cj6GESuKp">Chapter Seven Hints: Get secured overnight financing rates</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1VJzd020F3lfs-1cP2EAS2fBSKazIPYOC#scrollTo=vnPEV819ilWL">expected results here</a>.</p>
+<p>see <a class="reference external" href="https://colab.research.google.com/drive/17Psu-0RUSJC7NaNGmsEewrVI9vnkAyb1">Chapter Seven Hints: Get secured overnight financing rates</a>, and check the <a class="reference external" href="https://colab.research.google.com/drive/1iySe69LzP7hMel_X2AHtosQ5qzXKmyfp#scrollTo=kfPak5yXNMEq">expected results here</a>.</p>
 </section>
 <section id="take-a-deeper-dive-with-ai">
 <h2><font color='green'>Take a deeper dive with AI</font><a class="headerlink" href="#take-a-deeper-dive-with-ai" title="Link to this heading">#</a></h2>
-<section id="some-suggestions-to-get-you-started-with-gemini">
-<h3>Some suggestions to get you started with Gemini.<a class="headerlink" href="#some-suggestions-to-get-you-started-with-gemini" title="Link to this heading">#</a></h3>
+<p>Some suggestions to get you started with Gemini.</p>
 <ul class="simple">
 <li><p>Describe ways to access FRED</p></li>
 <li><p>How do I get an API key for FRED?</p></li>
 <li><p>Does pandas_datareader require an API key for FRED?</p></li>
 </ul>
-</section>
-<section id="copy-and-paste-the-questions-here">
-<h3><a class="reference external" href="https://gemini.google.com">Copy and paste the questions here</a><a class="headerlink" href="#copy-and-paste-the-questions-here" title="Link to this heading">#</a></h3>
-</section>
+<p><a class="reference external" href="https://gemini.google.com">Copy and paste the questions here</a></p>
 </section>
 </section>
 
@@ -555,7 +624,7 @@ except:
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -581,24 +650,6 @@ except:
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Define_Duratiion.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">What is duration and why does it matter</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Measuring_Interest_Rate_Risk_With_Duration.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Measuring Interest Rate Risk With Duration</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -615,15 +666,12 @@ except:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-short-video-on-fred">A short video on FRED</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstrating-fred-with-the-fed-s-ownership-of-financial-securities">Demonstrating FRED with the FED’s Ownership of Financial Securities</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-increase-in-the-fed-s-financial-market-intervention">Large Increase in the FED’s Financial Market Intervention</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-get-the-secured-overnight-financing-rates-for-the-fourth-quarter-of-2019"><font color="green">Application: Get the secured overnight financing rates for the fourth quarter of 2019.</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started-with-gemini">Some suggestions to get you started with Gemini.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-paste-the-questions-here">Copy and paste the questions here</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-ai"><font color="green">Take a deeper dive with AI</font></a></li>
 </ul>
   </nav></div>
 
@@ -648,7 +696,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by Arbitrage Partners..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>
@@ -661,17 +709,6 @@ By Financial Python
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <script>
-document.querySelectorAll('a').forEach(link => {
-  if (link.hostname !== window.location.hostname) {
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
-});
-</script>launch_buttons:
-
-</div>
   </div>
   
 </div>
