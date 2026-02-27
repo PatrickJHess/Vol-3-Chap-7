@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>What is duration and why does it matter &#8212; Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</title>
+    <title>What is duration and why does it matter &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,6 +45,7 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -60,10 +62,10 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Define_Duratiion';</script>
-    <script src="_static/open_new_tab.js?v=408d5d40"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Acessing Data From The FRED Database" href="FRED_Example.html" />
+    <link rel="next" title="Measuring Interest Rate Risk with Duration" href="Measuring_Interest_Rate_Risk_With_Duration.html" />
     <link rel="prev" title="Measuring Interest Rate Risk With Duration" href="Chapter_Seven_Highlights.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,7 +154,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -184,12 +186,23 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">What is duration and why does it matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FRED_Example.html">Acessing Data From The FRED Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk with Duration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Seven_Summary.html">Summarizing Measuring Interest Risk With Duration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions_Seven.html">Functions Imported by Chapter Six.</a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Library</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Volume 1: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
 </ul>
 
     </div>
@@ -447,7 +460,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -483,11 +496,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="FRED_Example.html"
+       href="Measuring_Interest_Rate_Risk_With_Duration.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Acessing Data From The FRED Database</p>
+        <p class="prev-next-title">Measuring Interest Rate Risk with Duration</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -535,7 +548,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by Arbitrage Partners..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>
@@ -548,17 +561,6 @@ By Financial Python
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <script>
-document.querySelectorAll('a').forEach(link => {
-  if (link.hostname !== window.location.hostname) {
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
-});
-</script>launch_buttons:
-
-</div>
   </div>
   
 </div>

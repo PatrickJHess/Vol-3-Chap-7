@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Financial Python &#8212; Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</title>
+    <title>Financial Python &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,6 +45,7 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -60,7 +62,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <script src="_static/open_new_tab.js?v=408d5d40"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Working with Jupyter Books" href="Interacting%20With%20Jupyter%20Books.html" />
@@ -153,7 +155,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts of Fixed Income:Measuring Interest Rate Risk With Duration</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -185,12 +187,23 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Seven_Highlights.html"><strong>Measuring Interest Rate Risk With Duration</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Define_Duratiion.html">What is duration and why does it matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FRED_Example.html">Acessing Data From The FRED Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Measuring_Interest_Rate_Risk_With_Duration.html">Measuring Interest Rate Risk with Duration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Seven_Summary.html">Summarizing Measuring Interest Risk With Duration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions_Seven.html">Functions Imported by Chapter Six.</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Library</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Volume 1: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
 </ul>
 
     </div>
@@ -354,9 +367,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income"><em><strong>Volume: Basic Concepts of Fixed Income</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-seven-measuring-interest-rate-risk-with-duration"><em><strong>Chapter Seven: Measuring Interest Rate Risk With Duration</strong></em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter"><em><strong>Leapfroggging into the chapter</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-seven-measuring-interest-rate-risk-with-duration">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter">Leapfroggging into the chapter</a></li>
 </ul>
 </li>
 </ul>
@@ -371,21 +384,25 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="financial-python">
-<h1><em><strong>Financial Python</strong></em><a class="headerlink" href="#financial-python" title="Link to this heading">#</a></h1>
+<h1>Financial Python<a class="headerlink" href="#financial-python" title="Link to this heading">#</a></h1>
 <section id="volume-basic-concepts-of-fixed-income">
-<h2><em><strong>Volume: Basic Concepts of Fixed Income</strong></em><a class="headerlink" href="#volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h2>
+<h2>Volume: Basic Concepts of Fixed Income<a class="headerlink" href="#volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h2>
 <section id="chapter-seven-measuring-interest-rate-risk-with-duration">
-<h3><em><strong>Chapter Seven: Measuring Interest Rate Risk With Duration</strong></em><a class="headerlink" href="#chapter-seven-measuring-interest-rate-risk-with-duration" title="Link to this heading">#</a></h3>
+<h3>Chapter Seven: Measuring Interest Rate Risk With Duration<a class="headerlink" href="#chapter-seven-measuring-interest-rate-risk-with-duration" title="Link to this heading">#</a></h3>
 <p>Chapters Five and Six focus on the yields of bonds- either the coupon rates required to make a bond sell for its par value (<strong>par yield)</strong> or the internal rate of return that equates a bond’s present value to its price (<strong>yield to maturity</strong>).   Because bond prices depend upon interest rates, one of the risks of owning a bond is unexpected changes in interest rates.  Increases and decreases of interest rates cause bond prices to fall and rise.</p>
 <p>This and the next chapter analyze the impact and measurement of interest rate risk.  This chapter describes the calculation and characteristics of <strong>duration</strong>.  <strong>Duration</strong> is a simplified but useful measure of a bond’s interest rate risk-a measurement of the sensitivity of bond prices relative to changes in their <strong>yields to maturity</strong>.  A measure that is directly related to the first derivative of the present formula with respect to the <strong>yield to maturity</strong>.  The same derivative used to calculate  <strong>yields to maturity</strong>.</p>
 <p><strong>Demonstrating Duration With Data from the Federal Reserve Bank Of St. Louis Database</strong></p>
 <p>This and future chapters access data from the FRED database that is maintained by the Federal Reserve Bank of St. Louis-one of the best sources for historical economic and financial data.  Duration depends upon characteristics of bonds as well as market conditions,  <strong>Par yield</strong> data is accessed from FRED and provides a natural experiment for examining what determines <strong>duration</strong>.  Between 1990 and 2025  <strong>yields to maturity</strong> and <strong>par yields</strong> of ten and thirty year bonds have varied between  0.5% and 9%. The result is many examples of low and high <strong>par yields</strong> and <strong>yields to maturity</strong>. Both variables affect <strong>duration</strong>.</p>
 </section>
 <section id="leapfroggging-into-the-chapter">
-<h3><em><strong>Leapfroggging into the chapter</strong></em><a class="headerlink" href="#leapfroggging-into-the-chapter" title="Link to this heading">#</a></h3>
+<h3>Leapfroggging into the chapter<a class="headerlink" href="#leapfroggging-into-the-chapter" title="Link to this heading">#</a></h3>
 <p>Like other chapters, there are no required dependencies between this and previous chapters. If you are unfamiliar with the material, you will benefit from reviewing previous chapters but you can begin here. As needed, the previously developed functions used in this chapter are imported from  a custom module. These functions are sufficient for you to benefit from the chapter.</p>
 </section>
 </section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -396,7 +413,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -447,9 +464,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income"><em><strong>Volume: Basic Concepts of Fixed Income</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-seven-measuring-interest-rate-risk-with-duration"><em><strong>Chapter Seven: Measuring Interest Rate Risk With Duration</strong></em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter"><em><strong>Leapfroggging into the chapter</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-seven-measuring-interest-rate-risk-with-duration">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter">Leapfroggging into the chapter</a></li>
 </ul>
 </li>
 </ul>
@@ -476,7 +493,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by Arbitrage Partners..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>
@@ -489,17 +506,6 @@ By Financial Python
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <script>
-document.querySelectorAll('a').forEach(link => {
-  if (link.hostname !== window.location.hostname) {
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
-});
-</script>launch_buttons:
-
-</div>
   </div>
   
 </div>

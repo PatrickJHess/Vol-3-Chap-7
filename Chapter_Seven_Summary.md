@@ -1,4 +1,4 @@
-## Summarizing Measuring Interest Risk With Duration
+# Summarizing Measuring Interest Risk With Duration
 
 Duration is a straightforward and valuable metric for gauging interest rate risk. However, it has two key limitations:
 

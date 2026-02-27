@@ -12,8 +12,25 @@ parts:
     - file: Chapter_Seven_Highlights
       sections:
       - file: Define_Duratiion
-      - file: FRED_Example
       - file: Measuring_Interest_Rate_Risk_With_Duration
       - file: Chapter_Seven_Summary
-      - file: imported_functions_Seven
-
+  #    - file: imported_functions_Seven
+  - caption: My Library
+    chapters:
+    - url: https://patrickjhess.github.io/Vol-3-Chap-1/
+      title: "Volume 1: Basics"
+  - caption: Hub & Other Chapters Of Basic Concepts Of Fixed Income
+    chapters:
+    - url: https://patrickjhess.github.io/Volume-Three-Hub/
+      title: "Hub For Basic Concepts Of Fixed Income"
+    - url: https://patrickjhess.github.io/Vol-3-Chap-1/
+      title: "Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates"
+    - url: https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/
+      title: "Chapters Two and Three: Accrued Interest and Bond Pay Data"
+    - url: https://patrickjhess.github.io/Vol-3-Chap-4/
+      title: "Chapters Four: Bootstrapping The Term Structure With Coupon Bonds" 
+    - url: https://patrickjhess.github.io/Vol-3-Chap-5/
+      title: "Chapter Five: Yield To Maturity"
+    - url: https://patrickjhess.github.io/Vol-3-Chap-6/
+      title: "Chapter Six: Yield To Maturity"
+ 
